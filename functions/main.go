@@ -6,7 +6,7 @@ import (
 
 func main() {
 
-	// Functions
+	// Functions Without Pointers
 	j := 15
 	fmt.Println("In main - j is:", j, "Located at:", &j)
 	resetValue(j)
@@ -18,6 +18,11 @@ func main() {
 
 	c, d := 1000, 40
 	fmt.Println("Max number between", c, "&", d, "is:", maximo(c, d))
+
+	reference := 20
+	fmt.Println(&reference)
+	pointer(&reference)
+	fmt.Println(reference)
 }
 
 func resetValue(i int) {
