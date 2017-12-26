@@ -14,11 +14,12 @@ func main() {
 	addGrocery("Pokemon Game")
 	addGrocery("Ice Cream")
 
+	addGroceries("Corn", "Peas", "Another")
+
 	listGroceries()
 }
 
 func addGrocery(grocery string) {
-	fmt.Println("Capacity", cap(groceries))
 	groceries = append(groceries, grocery)
 }
 
@@ -27,5 +28,16 @@ func listGroceries() {
 
 	for i := 0; i < len(groceries); i++ {
 		fmt.Println(groceries[i])
+	}
+
+	for _, grocery := range groceries {
+		fmt.Println(grocery)
+	}
+}
+
+func addGroceries(list ...string) {
+
+	for _, grocery := range list {
+		addGrocery(grocery)
 	}
 }
