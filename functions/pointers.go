@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func pointer(p *int) {
 	fmt.Println(&p)

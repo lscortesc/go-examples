@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 var groceries []string
 
@@ -17,6 +15,11 @@ func main() {
 	addGroceries("Corn", "Peas", "Another")
 
 	listGroceries()
+
+	antoherSlice()
+	slicingSlices()
+	createSlices()
+	nilSlice()
 }
 
 func addGrocery(grocery string) {
