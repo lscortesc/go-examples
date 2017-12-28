@@ -20,6 +20,8 @@ func main() {
 	slicingSlices()
 	createSlices()
 	nilSlice()
+	rangeSlice()
+	slicesExercise()
 }
 
 func addGrocery(grocery string) {

@@ -43,6 +43,7 @@ func createSlices() {
 }
 
 func printSlice(s string, x []int) {
+	fmt.Println("\n* Nil Slices *\n")
 	fmt.Printf("%s len=%d cap=%d %v\n",
 		s, len(x), cap(x), x)
 }
@@ -53,5 +54,28 @@ func nilSlice() {
 
 	if z == nil {
 		fmt.Println("Slice is null!")
+	}
+}
+
+func rangeSlice() {
+	fmt.Println("\n* Range Slices *\n")
+	// Range iterate over elements of a slice or a map
+	var pow = []int{1, 2, 4, 8, 16, 32, 64, 128}
+
+	for i, v := range pow {
+		fmt.Printf("2**%d = %d\n", i, v)
+	}
+
+	fmt.Println("\n* Range Slices Without Index/Value *\n")
+	pow = make([]int, 10)
+
+	// You can ignore the value
+	for i := range pow {
+		pow[i] = 1 << uint(i)
+	}
+
+	// You can forget the index with an underscore '_'
+	for _, value := range pow {
+		fmt.Printf("%d\n", value)
 	}
 }
