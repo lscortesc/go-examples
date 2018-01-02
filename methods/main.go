@@ -27,10 +27,19 @@ func (f MyFloat) Abs() float64 {
 	return float64(f)
 }
 
+// Methods with pointers
+func (v *Vertex) Scale(f float64) {
+	v.X = v.X * f
+	v.Y = v.Y * f
+}
+
 func main() {
 	v := &Vertex{3, 4}
 	fmt.Println(v.Abs())
 
 	f := MyFloat(-math.Sqrt2)
 	fmt.Println(f.Abs())
+
+	v.Scale(5)
+	fmt.Println(v, v.Abs())
 }
