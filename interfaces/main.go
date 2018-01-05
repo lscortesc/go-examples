@@ -19,6 +19,8 @@ func main() {
 
 	a.Abs()
 	f.Abs()
+
+	interfaces()
 }
 
 type MyFloat float64
